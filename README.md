@@ -1,6 +1,6 @@
-# ReactStarter
+# freeCodeCamp
 
-#### A template for my new React projects, early work in progress.
+#### My Leaderboard app for freeCodeCamp
 
 Currently this starter is using
 * React
@@ -8,6 +8,8 @@ Currently this starter is using
 * react-redux
 * normalize.css
 * redux-promise
+* axios
+* image-webpack-loader
 
 For workflow i am using
 * webpack
