@@ -50,23 +50,20 @@ module.exports = {
       //Fonts
       {
       test: /\.(woff|woff2)$/,
-      loader: "url?limit=10000&mimetype=application/font-woff"
+        loader: "url?limit=10000&mimetype=application/font-woff"
       },
       {
       test: /\.ttf$/,
-      loader: "url?limit=10000&mimetype=application/octet-stream"
+        loader: "url?limit=10000&mimetype=application/octet-stream"
       },
       {
       test: /\.eot$/,
-      loader: "file"
+        loader: "file"
       },
       //Images
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        loaders: [
-            'file?hash=sha512&digest=hex&name=[hash].[ext]',
-            'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
-        ]
+        loader: "url?limit=25000"
       }
 
     ]
