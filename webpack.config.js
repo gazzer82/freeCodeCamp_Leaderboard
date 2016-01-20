@@ -71,7 +71,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      title: 'ReactStarter',
+      title: 'Leaderboard',
       template: './html/index_template.html',
       inject: 'body',
       filename: '../index.html'
