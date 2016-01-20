@@ -10,7 +10,7 @@ export default class App extends Component {
       <div>
         <h1>Hello World</h1>
         <Leaderboard />
-        <h4>View source code on <a href="http://somelink.com"><img src={require("../../images/GitHub_Logo.png")} /></a></h4>
+        <h4>View source code on <a href="https://github.com/gazzer82/freeCodeCamp_Leaderboard"><img src={require("../../images/GitHub_Logo.png")} /></a></h4>
       </div>
     );
   }
