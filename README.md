@@ -27,4 +27,4 @@ For Production
 * node
 * express
 
-View the app on Heroku here leaderboard.garethjeanne.co.uk
+View the app on Heroku here http://leaderboard.garethjeanne.co.uk
