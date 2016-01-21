@@ -65,8 +65,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Leaderboard',
-      template: './html/index_template.html',
+      template: 'underscore-template-loader!./html/index_template.html',
+      title: 'freeCodeCamp Leaderboard',
       inject: 'body',
       filename: '../index.html'
     })
