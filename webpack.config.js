@@ -72,6 +72,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       template: 'underscore-template-loader!./html/index_template.html',
+      favicon: './images/favicon.ico',
       title: 'freeCodeCamp Leaderboard',
       inject: 'body',
       filename: '../index.html'
