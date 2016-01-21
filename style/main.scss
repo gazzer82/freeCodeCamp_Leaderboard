@@ -1,2 +1,82 @@
 //Normalise my CSS
-@import "~normalize.css/normalize.css"
+@import "~normalize.css/normalize.css";
+
+$dark_primary: #00796B;
+$primary: #009688;
+$light_primary: #B2DFDB;
+$text_icons: #ffffff;
+
+$accent: #536DFE;
+$primary_text: #212121;
+$secondary_text: #727272;
+$divider_color: #B6B6B6;
+
+body{
+  background-color: $dark_primary;
+}
+
+.camperTable, .camperTableBody{
+  background-color: $text_icons;
+}
+
+.camperHeader{
+  color: $secondary_text;
+}
+
+tr {
+  border-bottom-color: $divider_color !important;
+  background-color: $text_icons;
+}
+
+th, td {
+  border-radius: 0;
+}
+
+.camperImage {
+  margin: 0.2em;
+  padding: 0;
+  float: left;
+  max-width: 50px;
+}
+
+.table-title{
+  margin: 2em 0 0 0;
+  background-color: $primary;
+  color: $text_icons;
+}
+
+.table-title h4{
+  padding: 0.5em;
+  margin-bottom: 0;
+}
+
+.username-td, .thirtyscore-td, .allscore-td, .rank-td{
+  text-align: center;
+  vertical-align: middle;
+  color: $secondary_text;
+}
+
+.username-td{
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 1em;
+}
+
+.image-td{
+  width: 50px;
+}
+
+.gitlogo{
+  width: 4em;
+  vertical-align: middle;
+}
+
+.gitLink {
+  padding: 2em 0 2em 0;
+  display: inline-block;
+}
+.viewsource{
+  padding-top: 0.05em;
+  display: inline-block;
+  vertical-align: middle;
+}

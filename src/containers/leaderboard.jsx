@@ -2,62 +2,52 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {fetchCampers} from '../actions/action_fetch_campers';
+import RenderCampers from '../components/camper_row'
 
 class CampersTable extends Component {
   constructor(props){
     super(props);
     this.state= {
-      viewMode: 'all'
+      viewMode: '30'
     }
     this.props.fetchCampers();
   }
-  renderCamper(camper,index){
-    return(
-      <tr key={camper.username}>
-        <td>{index+1}</td>
-        <td>{camper.username}</td>
-        <td>{camper.recent}</td>
-        <td>{camper.alltime}</td>
-      </tr>
-    );
-  }
-  renderCampers(){
-    switch(this.state.viewMode){
-      case '30':
-        return(
-          this.props.campers30.map(this.renderCamper)
-        );
-      case 'all':
-        return(
-          this.props.campersAll.map(this.renderCamper)
-        );
-    }
-  }
   render(){
     return(
-      <table>
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Camper Name</th>
-            <th
-              onClick={() => {
-                console.log('sorting by 30 days');
-                this.setState({viewMode: '30'})
-              }
-            }>Points in past 30 days</th>
-            <th
-              onClick={() => {
-                console.log('sorting by all time');
-                this.setState({viewMode: 'all'})
-              }
-            } >All time points</th>
-          </tr>
-        </thead>
-        <tbody>
-          {this.renderCampers()}
-        </tbody>
-      </table>
+      <div className='main-table z-depth-2'>
+        <div className='center table-title'>
+          <h4>Leaderboard</h4>
+        </div>
+        <table className='bordered camper-table'>
+          <thead className='camperHeader'>
+            <tr>
+              <th className='center'><h6>#</h6></th>
+              <th></th>
+              <th><h6>Camper Name</h6></th>
+              <th className='center'
+                onClick={() => {
+                  console.log('sorting by 30 days');
+                  this.setState({viewMode: '30'})
+                }
+              }>
+              <h6>
+                Points in past 30 days {(this.state.viewMode === '30') ? '\u2304' : ''}
+              </h6></th>
+              <th className='center'
+                  onClick={() => {
+                  console.log('sorting by all time');
+                  this.setState({viewMode: 'all'})
+                  }
+                } >
+                <h6>
+                  All time points {(this.state.viewMode === 'all') ? '\u2304' : ''}
+                </h6>
+              </th>
+            </tr>
+          </thead>
+            <RenderCampers viewMode={this.state.viewMode} campers30={this.props.campers30} campersAll={this.props.campersAll} />
+        </table>
+      </div>
       );
   }
 

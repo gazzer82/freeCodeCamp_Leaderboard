@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Leaderboard from '../containers/leaderboard'
 
+require("materialize-css/bin/materialize.css");
+
 export default class App extends Component {
   constructor(props){
     super(props);
@@ -8,9 +10,11 @@ export default class App extends Component {
   render(){
     return(
       <div>
-        <h1>Hello World</h1>
         <Leaderboard />
-        <h4>View source code on <a href="https://github.com/gazzer82/freeCodeCamp_Leaderboard"><img src={require("../../images/GitHub_Logo.png")} /></a></h4>
+        <div className='gitLink'>
+          <span className='viewsource'>View source code on</span>
+          <span className='gitlogo'><a href="https://github.com/gazzer82/freeCodeCamp_Leaderboard"><img className='responsive-img gitlogo' src={require("../../images/GitHub_Logo.png")} /></a></span>
+        </div>
       </div>
     );
   }
